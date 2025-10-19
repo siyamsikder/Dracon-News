@@ -1,6 +1,7 @@
 import React from "react";
 import { FaEye, FaShareAlt } from "react-icons/fa";
 import { format } from "date-fns";
+import { CiBookmark } from "react-icons/ci";
 
 const NewsCard = ({ news }) => {
   const { title, rating, total_view, author, image_url, details, tags } = news;
@@ -21,11 +22,9 @@ const NewsCard = ({ news }) => {
             <p className="text-xs text-gray-500">{formattedDate}</p>
           </div>
         </div>
-        <button
-          type="button"
-          className="text-gray-500 hover:text-primary transition"
-          title="Share this article">
-          <FaShareAlt className="text-lg" />
+        <button className="text-gray-500 flex justify-center gap-1 hover:text-primary transition">
+          <CiBookmark />
+          <FaShareAlt />
         </button>
       </div>
 
